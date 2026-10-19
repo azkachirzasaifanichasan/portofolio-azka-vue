@@ -1,0 +1,60 @@
+<script setup>
+const channels = [
+    { label: 'GitHub', url: 'https://github.com/azkachirzasaifanichasan' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/azka-csc/' },
+    { label: 'Instagram', url: 'https://www.instagram.com/latestsins' },
+]
+</script>
+
+<template>
+    <div class="lg:col-span-7 flex flex-col items-start z-10 pr-0 lg:pr-8">
+        <div class="flex items-center gap-2 text-xs tracking-widest font-bold text-slate-500 uppercase mb-6">
+            <span class="w-6 h-[2px] bg-slate-400"></span>
+            <span>Connect & Build</span>
+        </div>
+
+        <h1 class="dark:text-white text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+            Tak kenal maka <span class="text-[#ff2b56]">tak cium</span>.
+        </h1>
+
+        <p class="text-xs md:text-sm text-slate-500 leading-relaxed mb-6 max-w-lg">
+            Have a project idea, want to collaborate, or just want to talk about clean code? Feel free to reach out directly via email or social platforms.
+        </p>
+
+        <a href="mailto:azkachirzasc@gmail.com" class="bg-[#ff2b56] hover:bg-[#e02047] text-white text-xs font-bold tracking-widest px-8 py-3 shadow-md transition">
+            Send An Email
+        </a>
+    </div>
+
+    <div class="lg:col-span-5 relative flex flex-col justify-center mt-10 lg:mt-0 ml-auto pr-24">
+        <h3 class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-6">Direct Channels</h3>
+
+        <div class="w-full space-y-6 mr-48">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 border-b border-slate-200 dark:border-slate-800 pb-6">
+                <div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Email</span>
+                    <a href="mailto:azkachirzasc@gmail.com" class="text-sm md:text-base font-bold text-slate-800 dark:text-slate-100 hover:text-[#ff2b56] dark:hover:text-[#ff2b56] transition break-all">
+                        azkachirzasc@gmail.com
+                    </a>
+                </div>
+
+                <div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Location</span>
+                    <span class="text-sm font-semibold text-slate-700 dark:text-slate-300 block">
+                        Bantul, Yogyakarta — Indonesia 🇮🇩
+                    </span>
+                </div>
+            </div>
+
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-6">
+                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">Social Platforms</span>
+                <div class="flex items-center gap-4 text-xs font-bold text-[#ff2b56]">
+                    <template v-for="(channel, index) in channels" :key="channel.label">
+                        <a :href="channel.url" target="_blank" class="hover:underline">{{ channel.label }}</a>
+                        <span v-if="index < channels.length - 1" class="text-slate-300 dark:text-slate-700">/</span>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

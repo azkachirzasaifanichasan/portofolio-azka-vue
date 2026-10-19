@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Dark mode berbasis class pada <html> (sama seperti darkMode: 'class' di project Blade) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* @keyframes shimmer — sama seperti di layouts/app.blade.php */
+@keyframes shimmer {
+    100% { transform: translateX(100%); }
+}
